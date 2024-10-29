@@ -1,0 +1,11 @@
+name: my_project_env
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - seaborn
+  - matplotlib
+  - pip
+  - pip:
+    - notebook

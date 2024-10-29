@@ -12,21 +12,25 @@ import seaborn as sns
 from src.utils import mix_data, get_data, data_to_plot
 from src.plots import make_plots
 
-# Files to read
-file_agro = r"Data\Agrofood_co2_emission.csv"
-file_gdp = r"Data\gdp.csv"
+# Creating the main function
 
-# Merging the data
+# inputs
+# file1: r"Data\Agrofood_co2_emission.csv"
+# file2: r"Data\gdp.csv"
 
-data = mix_data(file_agro, file_gdp)
+def main(file1):
+    # Making a data frame with the processed data path
+    file_mix = pd.read_csv(file1)
 
-# Columns to plot
-columns_to_plot = ["Average Temperature °C", "total emission", "GDP"]
+    # Columns to plot
+    columns_to_plot = ["Average Temperature °C", "total emission", "GDP"]
 
-# Making the plots
-make_plots(data, columns_to_plot)
+    # Making the plots
+    make_plots(file_mix, columns_to_plot)
 
-# Showing the plots
-plt.show()
+    # Showing the plots
+    plt.show()
 
-
+# Running the main function
+if __name__ == "__main__":
+    main("Data\processed_data.csv")

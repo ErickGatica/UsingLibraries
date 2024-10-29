@@ -134,6 +134,9 @@ def data_to_plot(data):
     
     return data_dict
 
+
+"""
+
 # Testing considering the files in the Data folder which is Data folde is in the same than src folder
 
 file1 = "src\Agrofood_co2_emission.csv"
@@ -146,5 +149,6 @@ column = "Savanna fires"
 data_column = get_data(data, country, column)
 print(data_column)
 
+"""
 
 
