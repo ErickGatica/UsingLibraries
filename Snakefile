@@ -1,17 +1,15 @@
 rule process:
-    input:
-        
     output:
         processed="Data/processed_data.csv"
-    script:
-        "process_data.py"
+    shell:
+        "python3 process_data.py"
 
 rule plots:
     input:
         processed="Data/processed_data.csv"
     output:
         plot="figures/4_panel_plot.png"
-    script:
-        "main.py"
+    shell:
+        "python3 main.py"
     
 
